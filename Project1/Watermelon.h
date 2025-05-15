@@ -19,9 +19,10 @@ public:
     }
 private:
 	std::vector<IMAGE> imgs;
-
+    //设置默认最高等级n
+    int level = 9;
 	void loadResources() {
-		for (size_t i = 1; i <= 7; i++)
+		for (size_t i = 1; i <= level; i++)
 		{
 			imgs.push_back(getTypeImage(i));
 		}
@@ -31,7 +32,7 @@ private:
         int height = 100;
         int width = 100;
 		//根据类型返回图片索引
-        //1,2,...,7个等级 3为原始大小
+        //1,2,...,9个等级 3为原始大小
         float scale = n / 3.0;
         int newHeight = height * scale;
         int newWidth = width * scale;

@@ -16,8 +16,7 @@ public:
         // 初始化物理引擎
         physicsEngine.setGravity(Vector2(0, 600.0f));  // 设置重力
         physicsEngine.setFriction(0.99f);             // 设置摩擦
-        //初始化下个西瓜提示
-        nextfruitTip.setImgs(imgSources.getAllImg());
+        
         // 初始化窗口
         initgraph(width, height);
         setbkcolor(WHITE);
@@ -92,6 +91,9 @@ public:
     }
     // 游戏主循环
     void run() {
+        //初始化下个西瓜提示
+        nextfruitTip.setImgs(imgSources.getAllImg());
+        nextfruitTip.randomNext();
         float deltaTime = 0.008f;  // 约60FPS
         boolean gameover = false;
         while (!gameover) {

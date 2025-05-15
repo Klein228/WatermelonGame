@@ -35,7 +35,7 @@ public:
 	}
 	int randomNext() {
 		int temp = next_index;
-		this->next_index = rand() % (fruitIMGs->size()-4);
+		this->next_index = rand() % (fruitIMGs->size()/2);
 		position.x = (getwidth() / 2 - fruitIMGs->at(next_index).getwidth() / 2);
 		position.y = 0- fruitIMGs->at(next_index).getheight() / 2;
 		return temp;
@@ -45,10 +45,7 @@ public:
 	}
 
 	NextFruit() {
-
-		this->next_index = 0;
-		position.x = (getwidth() / 2 - fruitIMGs->at(next_index).getwidth() / 2);
-		position.y = 0 - fruitIMGs->at(next_index).getheight() / 2;
+		next_index = 0;
 	};
 };
 
