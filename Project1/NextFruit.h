@@ -45,6 +45,7 @@ public:
 	}
 
 	NextFruit() {
+
 		this->next_index = 0;
 		position.x = (getwidth() / 2 - fruitIMGs->at(next_index).getwidth() / 2);
 		position.y = 0 - fruitIMGs->at(next_index).getheight() / 2;
